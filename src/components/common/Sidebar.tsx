@@ -1,6 +1,11 @@
 import type React from 'react'
 import avatar from '../../assets/myAvatar.svg'
-import { CircleUser, type LucideProps, Briefcase, ShoppingCart, Mail, LucideNotebookTabs, LucideShoppingBasket } from 'lucide-react'
+import { CircleUser, type LucideProps, Briefcase, ShoppingCart, Mail, Home } from 'lucide-react'
+import { usePageContext } from 'vike-react/usePageContext'
+import { clsx } from 'clsx'
+
+
+// TODO : add sidebar for mobile devices 
 export default function Sidebar() {
 
   type linkProps = {
@@ -11,10 +16,11 @@ export default function Sidebar() {
 
   const links: linkProps[] = [
     {
-      name: 'About',
-      href: '/about',
-      reactIcon: CircleUser
+      name: 'Home',
+      href: '/',
+      reactIcon: Home
     },
+
     {
       name: 'My Projects',
       href: '/projects',
@@ -29,8 +35,18 @@ export default function Sidebar() {
       name: 'Contact me',
       href: '/contact',
       reactIcon: Mail
-    }
+    },
+
   ]
+
+  const pageContext = usePageContext()
+
+  const { urlPathname } = pageContext
+
+  const isActiveUrl = (href: string): boolean => {
+    return href === "/" ? urlPathname === href : urlPathname.startsWith(href)
+  }
+
 
   return (
     <div className='hidden lg:block flex-col border-r-2 border-r-gray-900/10 p-4 w-auto h-screen bg-[#1c1c1c]'>
@@ -52,7 +68,10 @@ export default function Sidebar() {
               links.map((link) => (
                 <div key={link.name}>
                   <div className='flex flex-col'>
-                    <div className='flex text-gray-600 hover:text-white cursor-pointer p-3 rounded-md space-x-2'>
+                    <div className={clsx('flex text-zinc-400 hover:text-white cursor-pointer p-2 rounded-md space-x-2 ', {
+                      'bg-[#2b2b2b]': isActiveUrl(link.href)
+                    })
+                    }>
                       {<link.reactIcon size={20} />}
                       <a href={link.href}><span>{link.name}</span></a>
                     </div>
