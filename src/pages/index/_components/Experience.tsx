@@ -1,4 +1,3 @@
-
 type experienceProps = {
   timeline: string,
   company: string,
@@ -36,23 +35,21 @@ export default function Experience() {
   )
 }
 
-
 function Experiencelist({ timeline, company, position, skills }: experienceProps) {
   return (
-    <div className="flex flex-col pt-8">
-      <div className="flex gap-10">
-        <p className="text-md text-gray-400">{timeline}</p>
-        <div className="flex flex-col text-md  font-semibold gap-y-3">
-          <p className=" text-slate-100">{company}</p>
-          <p className=" text-slate-100">{position}</p>
-          <div className="flex flex-wrap gap-x-2">
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <div className="flex flex-col pt-8">
+        <p className="text-gray-400 text-md">{timeline}</p>
+        <div className="flex flex-col gap-2 font-semibold text-md">
+          <p className="text-slate-300">{company}</p>
+          <p className="text-slate-300">{position}</p>
+          <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4 ">
             {skills.map((skill) => (
-              <p key={skill} className="text-sm bg-zinc-800/60 p-2 border  border-gray-600 outline-none  rounded-md hover:text-slate-100">{skill}</p>
+              <p key={skill} className="p-2 text-sm border border-gray-600 rounded-md bg-zinc-800/60 hover:text-slate-100">{skill}</p>
             ))}
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
-

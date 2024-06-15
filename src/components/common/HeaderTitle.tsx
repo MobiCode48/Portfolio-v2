@@ -4,7 +4,7 @@ export default function HeaderTitle({ title }: { title: string }) {
   return (
     <Fragment>
       <div className='flex flex-col'>
-        <h1 className='text-2xl font-bold text-white w-fit'>
+        <h1 className='text-lg font-bold text-white lg:text-2xl w-fit'>
           {title}
           <hr />
         </h1>
