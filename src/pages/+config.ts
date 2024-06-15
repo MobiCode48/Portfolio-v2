@@ -8,6 +8,6 @@ export default {
   Layout,
   Head,
   // <title>
-  title: "Emmanuel Portfolio",
+  title: "Emmanuel Ezeagwula",
   extends: vikeReact,
 } satisfies Config;

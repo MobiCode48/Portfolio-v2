@@ -1,6 +1,6 @@
 import type React from 'react'
 import avatar from '../../assets/myAvatar.svg'
-import { CircleUser, type LucideProps, Briefcase, ShoppingCart, Mail, Home } from 'lucide-react'
+import { type LucideProps, Briefcase, ShoppingCart, Mail, Home } from 'lucide-react'
 import { usePageContext } from 'vike-react/usePageContext'
 import { clsx } from 'clsx'
 
@@ -65,7 +65,7 @@ export default function Sidebar() {
           </div>
           <div className='flex flex-col space-y-2'>
             {
-              links.map((link) => (
+              links.map((link: linkProps) => (
                 <div key={link.name}>
                   <div className='flex flex-col'>
                     <div className={clsx('flex text-zinc-400 hover:text-white cursor-pointer p-2 rounded-md space-x-2 ', {
