@@ -1,5 +1,5 @@
-import HeaderTitle from "../../components/common/HeaderTitle";
-import Experience from "./_components/Experience";
+import HeaderTitle from "../../components/common/headerTitle";
+import Experience from "./_components/experience";
 
 export default function Page() {
 
@@ -8,7 +8,6 @@ export default function Page() {
   }
 
   const skills: skillProps[] = [
-
     { name: "Python" },
     { name: "Java" },
     { name: "Kotlin" },
@@ -26,7 +25,6 @@ export default function Page() {
     { name: "Zustand" },
     { name: "Scrum" },
     { name: "Postman " },
-
   ]
 
   return (
@@ -44,7 +42,7 @@ export default function Page() {
             <div className="grid w-full grid-cols-2 gap-2 mt-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
               {skills.map(({ name }) => (
                 <div key={name} className="p-2 border border-gray-600 rounded-md bg-zinc-800 hover:text-white">
-                  <span>{name}</span>
+                  <p>{name}</p>
                 </div>
               ))}
             </div>

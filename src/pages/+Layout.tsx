@@ -1,4 +1,4 @@
-import Sidebar from '../components/common/Sidebar';
+import Sidebar from '../components/common/sidebar';
 import '../styles/tailwind.css'
 import type React from "react";
 
