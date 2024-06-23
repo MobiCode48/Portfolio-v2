@@ -9,14 +9,14 @@ const services: serviceProps[] = [
   {
     name: "Backend Development",
     description: "I will take care of the backend development of your project.",
-    tools: ["Node", "Typescript", "Bun", "Trpc", "Postgresql", "Prisma"],
+    tools: ["Node", "Typescript", "Bun", "Trpc", "Postgres", "Prisma"],
     price: 300,
   },
   {
     name: "Frontend Development",
     description:
       "I will take care of the frontend development of your project.",
-    tools: ["React", "Vite", "React.js", "Tailwind CSS", "Daisy UI"],
+    tools: ["React", "Vite", "Tailwind CSS", "Daisy UI"],
     price: 300,
   },
 ];
