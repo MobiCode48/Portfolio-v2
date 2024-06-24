@@ -24,7 +24,7 @@ const services: serviceProps[] = [
 export default function ServiceCard() {
   return (
     <div className="flex flex-col gap-3">
-      {services.map(({ name, description, tools, price }) => (
+      {services.map(({ name, description, tools, price }: serviceProps) => (
         <ServiceCardItem
           name={name}
           description={description}
