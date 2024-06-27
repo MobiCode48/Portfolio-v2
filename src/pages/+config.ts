@@ -7,7 +7,7 @@ import Layout from "./+Layout.jsx";
 export default {
   Layout,
   Head,
-  // <title>
+  ssr: false,
   title: "Emmanuel Ezeagwula",
   extends: vikeReact,
 } satisfies Config;
