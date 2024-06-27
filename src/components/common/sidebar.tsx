@@ -20,7 +20,7 @@ export default function Sidebar() {
   return (
     <div>
       {!isSmallDevice ? (
-        <div className="hidden lg:block flex-col border-r-2 border-r-gray-900/10 p-4 w-auto min-h-screen bg-[#1c1c1c]">
+        <div className="hidden lg:block flex-col border-r-2 border-r-gray-900/10 p-4 w-auto min-h-screen h-full bg-[#1c1c1c]">
           <div className="mt-12">
             <div className="flex flex-col gap-y-8">
               <div className="flex space-x-4">
